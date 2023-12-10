@@ -1,7 +1,5 @@
 # melos_managed_dependency_overrides:
 dependency_overrides:
-  copy_with:
-    path: packages/copy_with
   flutter_common_9615:
     path: packages/flutter_common_9615
    flutter_home_9615:

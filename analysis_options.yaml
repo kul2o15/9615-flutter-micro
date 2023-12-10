@@ -1,0 +1,30 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - '**.spec.dart'
+    - '**/generated_plugin_registrant.dart'
+
+linter:
+  rules:
+    - avoid_print
+    - prefer_relative_imports
+    - unawaited_futures
+    - avoid_void_async
+    - avoid_slow_async_io
+    - lines_longer_than_80_chars
+    - file_names
+    - use_build_context_synchronously
+    - use_key_in_widget_constructors
+    - avoid_single_cascade_in_expression_statements
+    - curly_braces_in_flow_control_structures
+    - prefer_conditional_assignment
+    - prefer_null_aware_operators
+    - prefer_final_fields
+    - unnecessary_await_in_return
+    - await_only_futures
+    - cancel_subscriptions
+    - discarded_futures
+    - directives_ordering
+    - require_trailing_commas
+

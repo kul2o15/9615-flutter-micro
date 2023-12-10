@@ -1,0 +1,11 @@
+version: '2.4'
+
+services:
+  flutter:
+    container_name: flutter
+    build: .
+    volumes:
+      - flutter-data:/root/.pub-cache
+
+volumes:
+  flutter-data:

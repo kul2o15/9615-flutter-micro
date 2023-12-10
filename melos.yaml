@@ -1,0 +1,37 @@
+name: flutter_micro_9615
+
+packages:
+  - features/**
+  - packages/**
+  - .
+
+ignore:
+  - features/**/example
+  - packages/**/example
+
+scripts:
+  install:lint:
+    exec: cp ../../analysis_options.yaml ./
+    packageFilters:
+      scope: "flutter_*"
+  refresh:
+    exec: flutter clean && flutter pub get
+  gen:
+    exec: dart run build_runner build --delete-conflicting-outputs
+    packageFilters:
+      scope:
+        - "flutter"
+  analyze:
+    exec: dart analyze .
+  format:
+    exec: dart format .
+  format:check:
+    exec: dart format . --set-exit-if-changed
+  test:gen:
+    run: melos exec -c 1 --dir-exists="test" --fail-fast -- flutter test --update-goldens
+  test:unittest:
+    run: melos exec -c 1 --dir-exists="test" --fail-fast -- flutter test --coverage
+  test:merge:
+    run: >
+      coverde rm MELOS_ROOT_PATH/coverage/filtered.lcov.info &&
+      melos exec --file-exists=coverage/lcov.info -- "coverde filter --input ./coverage/lcov.info --output MELOS_ROOT_PATH/coverage/filtered.lcov.info --paths-parent MELOS_PACKAGE_PATH --filters '\.g\.dart'"

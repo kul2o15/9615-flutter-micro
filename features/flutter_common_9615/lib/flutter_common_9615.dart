@@ -1,5 +1,7 @@
 library flutter_common_9615;
 
+export "src/themes.dart";
+
 /// A Calculator.
 class Calculator {
   /// Returns [value] plus 1.

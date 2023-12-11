@@ -1,3 +1,4 @@
 # melos_managed_dependency_overrides:
+dependency_overrides:
   flutter_common_9615:
     path: ../flutter_common_9615

@@ -1,6 +1,6 @@
 # melos_managed_dependency_overrides:
 dependency_overrides:
   flutter_common_9615:
-    path: packages/flutter_common_9615
-   flutter_home_9615:
-    path: packages/flutter_home_9615
+    path: features/flutter_common_9615
+  flutter_home_9615:
+    path: features/flutter_home_9615

@@ -13,7 +13,7 @@ Future<void> main() async {
         Locale('en'),
         Locale('la'),
       ],
-      path: 'packages/feature_common_9615/lib/assets/translations',
+      path: 'packages/flutter_common_9615/lib/assets/translations',
       fallbackLocale: const Locale('en'),
       child: const MyApp(),
     ),
